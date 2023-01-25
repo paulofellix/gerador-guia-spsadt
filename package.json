@@ -1,0 +1,73 @@
+{
+  "name": "gerador-guia-spsadt",
+  "version": "1.0.0",
+  "description": "Gerador de guias SP/SADT em PDF seguindo padrões da ANS.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "pdfkit": "^0.13.0",
+    "tslib": "~2.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@faker-js/faker": "^7.6.0",
+    "@types/jest": "~29.2",
+    "@types/node": "~18",
+    "@types/pdfkit": "^0.12.8",
+    "@typescript-eslint/eslint-plugin": "~5.44",
+    "@typescript-eslint/parser": "~5.44",
+    "cpx": "^1.5.0",
+    "eslint": "~8.28",
+    "eslint-config-prettier": "~8.5",
+    "eslint-plugin-jest": "~27.1",
+    "jest": "~29.3",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "prettier": "~2.8",
+    "rimraf": "~3.0",
+    "ts-jest": "~29.0",
+    "ts-node": "^10.9.1",
+    "tsutils": "~3.21",
+    "tsx": "^3.12.2",
+    "typescript": "~4.9"
+  },
+  "scripts": {
+    "start": "node build/src/main.js",
+    "clean": "rimraf coverage build tmp lib",
+    "fontes:mkdir": "mkdir -p lib/gerador/fontes",
+    "fontes:cp": "cpx 'src/gerador/fontes/*' lib/gerador/fontes/",
+    "fontes": " run-s fontes:mkdir fontes:cp",
+    "prebuild": "npm run lint && run-s clean fontes",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "build:release": "npm run clean && tsc -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts --ext .mts",
+    "test": "jest --coverage",
+    "prettier": "prettier --config .prettierrc --write .",
+    "test:watch": "jest --watch",
+    "watch:build:pdf": "npm-watch build:pdf",
+    "build:pdf": "run-s build:pdf:consulta build:pdf:spsadt",
+    "build:pdf:consulta": "tsx exemplos/tasy-consulta/guia.ts",
+    "build:pdf:spsadt": "tsx exemplos/tasy-spsadt/guia.ts"
+  },
+  "watch": {
+    "build:pdf": {
+      "patterns": [
+        "lib",
+        "exemplos"
+      ],
+      "extensions": "ts,js",
+      "quiet": true,
+      "legacyWatch": true
+    }
+  },
+  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 18.12 <19"
+  },
+  "volta": {
+    "node": "18.12.1"
+  }
+}
