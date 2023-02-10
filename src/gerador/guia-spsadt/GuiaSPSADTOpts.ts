@@ -258,7 +258,7 @@ export namespace GuiaSPSADTOpts {
         height: 17,
         fields: [
           {
-            id: 'dadosSolicitante.nomeProfissional',
+            id: 'dadosSolicitante.nomeProfissionalSolicitante',
             fieldType: 'field',
             label: '15 - Nome do Profissional Solicitante',
             width: 225,
@@ -679,7 +679,7 @@ export namespace GuiaSPSADTOpts {
     atendimentoRN = 'atendimentoRN',
     'dadosSolicitante.codigoNaOperadora' = 'dadosSolicitante.codigoNaOperadora',
     'dadosSolicitante.nomeContratado' = 'dadosSolicitante.nomeContratado',
-    'dadosSolicitante.nomeProfissionalSoliciatante' = 'dadosSolicitante.nomeProfissionalSoliciatante',
+    'dadosSolicitante.nomeProfissionalSolicitante' = 'dadosSolicitante.nomeProfissionalSolicitante',
     'dadosSolicitante.conselhoProfissional' = 'dadosSolicitante.conselhoProfissional',
     'dadosSolicitante.numeroConselhoProfissional' = 'dadosSolicitante.numeroConselhoProfissional',
     'dadosSolicitante.ufConselhoProfissional' = 'dadosSolicitante.ufConselhoProfissional',

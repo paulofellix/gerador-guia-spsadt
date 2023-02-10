@@ -115,7 +115,7 @@ export type GuiaSPSADT = {
     dadosSolicitante?: {
         codigoNaOperadora?: string;
         nomeContratado?: string;
-        nomeProfissionalSoliciatante?: string;
+        nomeProfissionalSolicitante?: string;
         conselhoProfissional?: string;
         numeroConselhoProfissional?: string;
         ufConselhoProfissional?: string;

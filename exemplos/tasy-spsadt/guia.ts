@@ -65,7 +65,7 @@ const guia: GuiaSPSADT = {
   dadosSolicitante: {
     codigoNaOperadora: faker.random.numeric(9).toString(),
     nomeContratado: faker.company.name() + ' ' + faker.company.companySuffix().toLocaleUpperCase(),
-    nomeProfissionalSoliciatante: faker.name.fullName(),
+    nomeProfissionalSolicitante: faker.name.fullName(),
     conselhoProfissional: faker.helpers.arrayElement(conselhos),
     numeroConselhoProfissional: faker.random.numeric(6).toString(),
     ufConselhoProfissional: faker.address.stateAbbr(),

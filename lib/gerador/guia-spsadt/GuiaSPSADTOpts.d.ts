@@ -20,7 +20,7 @@ export declare namespace GuiaSPSADTOpts {
         atendimentoRN = "atendimentoRN",
         'dadosSolicitante.codigoNaOperadora' = "dadosSolicitante.codigoNaOperadora",
         'dadosSolicitante.nomeContratado' = "dadosSolicitante.nomeContratado",
-        'dadosSolicitante.nomeProfissionalSoliciatante' = "dadosSolicitante.nomeProfissionalSoliciatante",
+        'dadosSolicitante.nomeProfissionalSolicitante' = "dadosSolicitante.nomeProfissionalSolicitante",
         'dadosSolicitante.conselhoProfissional' = "dadosSolicitante.conselhoProfissional",
         'dadosSolicitante.numeroConselhoProfissional' = "dadosSolicitante.numeroConselhoProfissional",
         'dadosSolicitante.ufConselhoProfissional' = "dadosSolicitante.ufConselhoProfissional",
